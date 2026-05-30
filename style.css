@@ -1,6 +1,6 @@
 :root {
     --background-color: #b0b6b6;
-    --accent-color: #7a6b1d;
+    --accent-color: #000000;
 
     --spacing-xs: 8px;
     --spacing-sm: 13px;
@@ -15,6 +15,7 @@
 }
 
 body {
+    background: linear-gradient(90deg,rgb(103, 138, 162) 0%, rgba(122, 145, 134, 1) 50%, rgb(153, 125, 101) 100%);;
     background-color: var(--background-color);
     font-family: Arial, sans-serif;
     color: #000000;
@@ -35,7 +36,28 @@ h2 {
 
 .tabs button {
     margin: var(--spacing-sm);
-    font-size: var(--font-md);
+    font-size: var(--font-sm);
+    padding: 4px 8px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: #3dd1eb;
+    color: #000000;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.tabs button:hover {
+    background-color: #2fe0ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.025);
+}
+
+.tabs button:active {
+    background-color: #36bbd2;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.975);
 }
 
 .rowColSelector {
@@ -50,6 +72,27 @@ h2 {
     margin: var(--spacing-sm);
     justify-content: center;
     align-items: center;
+    padding: 3px 6px;
+    background-color: #3dd1eb;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.createButton:hover {
+    background-color: #2fe0ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.025);
+}
+
+.createButton:active {
+    background-color: #36bbd2;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.975);
 }
 
 .matrix {
@@ -60,7 +103,7 @@ h2 {
 }
 
 .madeMatrices {
-    display: flex;
+    display: inline-flex;
     gap: var(--spacing-xs);
     justify-content: center;
     align-items: center;
@@ -83,24 +126,117 @@ input {
 .operatorButtons {
     font-size: var(--font-md);
     padding: var(--spacing-sm);
+    padding-bottom: 0;
     display: none;
 }
 
 .operatorButtons button {
     font-size: var(--spacing-sm);
+    padding: 3px 6px;
+    background-color: #3dd1eb;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
-.powerContainer {
+.operatorButtons button:hover {
+    background-color: #2fe0ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.025);
+}
+
+.operatorButtons button:active {
+    background-color: #36bbd2;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.975);
+}
+
+.calculate button {
+    padding: 3px 6px;
+    background-color: #3dd1eb;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.calculate button:hover {
+    background-color: #2fe0ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.025);
+}
+
+.calculate button:active {
+    background-color: #36bbd2;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.975);
+}
+
+/* .createButtons {
     display: inline-flex;
     position: relative;
     align-items: center;
-    width: 10%;
-    gap: 0px;
+    width: 20%;
+    gap: var(--spacing-xs);
+} */
+
+.powerContainer {
+    gap: 0;
+}
+
+.powerContainer button {
+    padding: 1px;
+    background-color: #3dd1eb;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 25px 0 0 25px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.powerContainer button:hover {
+    background-color: #2fe0ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.025);
+}
+
+.powerContainer button:active {
+    background-color: #36bbd2;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.975);
 }
 
 .powerInput {
+    margin-left: 0;
     font-size: var(--spacing-sm);
-    margin: 0;
+    background-color: #3dd1eb;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 0 25px 25px 0;
+    transition: all 0.5s;
+}
+
+.powerInput:hover {
+    background-color: #2fe0ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.025);
+}
+
+.powerInput:active {
+    background-color: #36bbd2;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.975);
 }
 
 .result {
