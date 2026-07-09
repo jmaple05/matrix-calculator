@@ -6,6 +6,12 @@ function createMatrix(containerId, rows, cols) {
     const container = document.getElementById(containerId);
     container.innerHTML = "";
 
+    if (containerId == "matrixA") {
+        document.getElementById("doubleMatrixOperationButtons").style.display = "block";
+        document.getElementById("calculateButton").style.display = "block";
+        document.getElementById("doubleMatrixResultContainer").style.display = "inline-block";
+    }
+
     let matrix = [];
 
     for (let i = 0; i < rows; i++) {
@@ -99,7 +105,7 @@ function showTab(tab) {
 
     if (tab == "single") {
         document.getElementById("singleTab").style.display = "block";
-        
+        document.getElementById("singleMatrixResultContainer").style.display = "inline-block";
     } else {
         document.getElementById("doubleTab").style.display = "block";
     }

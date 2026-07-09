@@ -50,17 +50,18 @@
                 <br id="operationButtonBreak">
                 <button onclick="displayMatrix(rowEchelon(getMatrixValues(singleMatrixInputs)), 'singleMatrixResult')" id="rowReduceButton">Row Echelon Form</button>
                 <button onclick="displayResult(rank(getMatrixValues(singleMatrixInputs)))" id="rankButton">Rank</button>
-            </div>
+            
                 <div class="powerContainer" id="powerContainer">
                     <button class="powerButton" onclick="displayMatrix(power(getMatrixValues(singleMatrixInputs), document.getElementById('powerExp').value), 'singleMatrixResult')">
                         Power: 
                     </button>
                     <input type="number" class="powerInput" id="powerExp" value="2" min="1">
                 </div>
+            </div>
                 <br>
 
             <div id="singleResult"></div>
-            <math class="result" id="singleMatrixResultContainer">
+            <math class="result" style="display: none;" id="singleMatrixResultContainer">
                 <mrow>
                     <mo>[</mo>
                     <mtable id="singleMatrixResult" rowspacing="1em"></mtable>
@@ -77,7 +78,6 @@
                 <button onclick="matrixBInputs = createMatrix('matrixB', document.getElementById('rows').value, document.getElementById('cols').value)"
                 class="createButton">Create Second Matrix</button>
             </div>
-            <br>
 
             <div class="madeMatrices">
                 <div id="matrixA" class="matrix"></div>
@@ -85,17 +85,17 @@
                 <div id="matrixB" class="matrix"></div>
             </div>
 
-            <div class="operatorButtons" style="display: block;">
+            <div class="operatorButtons" style="display: none"; id="doubleMatrixOperationButtons">
                 <button onclick="setOperator('+')">+</button>
                 <button onclick="setOperator('-')">-</button>
                 <button onclick="setOperator('X')">X</button>
             </div>
 
-            <div class="calculate">
+            <div class="calculate" style="display: none"; id="calculateButton">
                 <button onclick="calculate()">Calculate</button>
             </div>
 
-            <math class="result">
+            <math class="result" style="display: none"; id="doubleMatrixResultContainer">
                 <mrow>
                     <mo>[</mo>
                     <mtable id="doubleMatrixResult" rowspacing="1em"></mtable>
